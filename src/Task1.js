@@ -1,4 +1,5 @@
 import React from "react"
+import * as PT from 'prop-types'
 
 export default function Task1() {
   let query = (new URL(document.location)).searchParams
@@ -23,6 +24,11 @@ function DisplayLi({c, xs}) {
   {el}
         </a>)}
   </ul >
+}
+
+DisplayLi.propTypes = {
+  c: PT.number.isRequired,
+  xs: PT.array.isRequired
 }
 
 
